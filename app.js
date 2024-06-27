@@ -147,3 +147,136 @@
 
 
 // console.log(tablaDelNumero(5));
+
+//Desafios Arrays
+
+//Ejercicio 1
+
+let lista = [];
+
+//Ehercicio 2
+
+let lenguajesProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+
+//Ejercicio 3
+
+lenguajesProgramacion.push('Java', 'Ruby', 'GoLang');
+
+console.log(lenguajesProgramacion);
+
+//Ejercicio 4
+
+function lenguajesSeparadamente() {
+    for (let i = 0; i < lenguajesProgramacion.length; i++) {
+      console.log(lenguajesProgramacion[i]);
+    }
+  }
+  
+  lenguajesSeparadamente();
+
+    //Ejercicio 5
+
+    function mostrarLenguajesInverso () {
+        let inverso = lenguajesProgramacion.slice().reverse(); //Use reverse y slide. 
+        return console.log(inverso);
+        }
+        
+        mostrarLenguajesInverso();
+
+    //Ejercicio 6
+
+    let listaDeNumeros = [1,2,3,4,5,6,7,8,9,10];
+
+    function promedioElementos () {
+
+        let promedio = listaDeNumeros.reduce((total, numero) => total + numero, 0)/ listaDeNumeros.length;
+        
+        return promedio;
+
+        //Se puede optimizar para que al pasar el parametro nos de el resultado
+
+    }
+    
+    console.log(promedioElementos());
+
+    //Ejercicio 7
+
+    let listaNumeros = [1,2,3,4,5,6,7,8,9,10];
+
+    function numeroMayorYMenor () {
+        let numeroMayor = Math.max(...listaNumeros);
+        let numeroMenor = Math.min(...listaNumeros)
+        return `El numero mayor es ${numeroMayor} y el numero menor es ${numeroMenor}` ;
+    }
+
+    console.log(numeroMayorYMenor());
+
+    //Ejercicio 8
+
+    let listaElementos = [1,2,3,4,5,6,7,8,9,10];
+
+    function sumaElementos() {
+       let suma = listaElementos.slice().reduce((total, elemento) => total + elemento, 0);
+
+       return suma;
+    }
+
+
+    console.log(sumaElementos());
+
+    //Ejercicio 9
+
+    let listaDeNombres = ['Lau', 'Stella', 'Mila', 'Mario'];
+
+    function buscarIndiceNombre(nombre) {
+        // Recorrer el array lista de nombres
+        for (let i = 0; i < listaDeNombres.length; i++) {
+            // Verificar si el elemento actual es igual al nombre buscado
+            if (listaDeNombres[i] === nombre) {
+                // Devolver el índice si se encuentra el nombre
+                return i;
+            }
+        }
+        // Devolver -1 si el nombre no se encuentra en el array
+        return -1;
+    }
+    
+    console.log(buscarIndiceNombre('Mario'));
+
+    //Ejercicio 10 
+
+    let listaNumeros1 = [1, 2, 3, 4, 5];
+    let listaNumeros2 = [6, 7, 8, 9, 10];
+
+    function listas() {
+        let sumaDeListas = [];
+
+        //Iteracion sobre los arrays y sumar los elementos 
+
+        for( let i = 0; i < listaNumeros1.length; i ++) {
+            sumaDeListas.push(listaNumeros1[i] + listaNumeros2[i]);
+        }
+        return sumaDeListas;
+    }
+    
+    console.log(listas());
+
+    //Ejercicio 11
+
+    let listadoDeNumeros = [1, 2, 3, 4, 5];
+
+    function numeroCuadrado (listadoDeNumeros) {
+
+        let cuadrados = [];
+
+        for( let i = 0; i < listadoDeNumeros.length; i++) {
+            
+            let cuadrado = listadoDeNumeros[i] * listadoDeNumeros[i];
+            cuadrados.push(cuadrado);
+            
+         }
+         return cuadrados;
+        
+    }
+
+console.log(numeroCuadrado(listadoDeNumeros));
